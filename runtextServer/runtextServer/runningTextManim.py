@@ -8,7 +8,8 @@ class RunningTextRightToLeft(MovingCameraScene):
 
     def construct(self):
         text = Text(self.text, font_size=96)
-
+        text.set_width(config.frame_width - 1)
+        text.set_height(config.frame_height / 2)
         text.to_edge(RIGHT).shift(RIGHT * text.width)
 
         self.add(text)
